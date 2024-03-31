@@ -19,7 +19,7 @@ def check_phone():
     while True:
         phone_number = input(str("Enter your phone number +375(##)###-##-##: "))
         if fullmatch(
-            r"\+[3][7][5][(][2][5,9][)]\d\d\d[-]\d\d[-]\d\d|\+[3][7][5][(][3][3][)]\d\d\d[-]\d\d[-]\d\d|\+[3][7][5][(][4][4][)]\d\d\d[-]\d\d[-]\d\d", phone_number
+            r"\+[3][7][5][(]([2][59]|[3][3]|[4][4])[)]\d\d\d[-]\d\d[-]\d\d", phone_number
             ):
             print(f"Your phone >>{phone_number}<<")
             break
