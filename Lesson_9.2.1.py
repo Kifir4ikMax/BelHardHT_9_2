@@ -20,3 +20,15 @@ def check_login():
     
 check_login()
 
+
+#Вариант 2 (где в функцию передаём строковое значение)
+from re import fullmatch
+def check_login(some_string: str):
+    if fullmatch(r"\w{5,20}", some_string):                 
+        print(f"Your login >>{some_string}<<")
+    else:
+        print("Invalid login, please enter again!")
+
+    
+check_login("Kifir_1992")
+
