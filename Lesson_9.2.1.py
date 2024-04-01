@@ -11,14 +11,12 @@
 #Импортируем из модуля регулярок под модуль findall
 from re import fullmatch
 def check_login():
-    while True:
-        login = input(str("Enter login: "))
-        if fullmatch(r"\w{5,20}", login):                   #Регулярка на валидность по символам и нижнему "_" ([a-zA-Z0-9_]). Можно дополнить кириллицей [a-zA-ZА-ЯЁа-яё0-9_]
-            print(f"Your login >>{login}<<")
-            break
-        else:
-            print("Invalid login, please enter again!")
-    return login
-    
+    login = input(str("Enter login: "))
+    if fullmatch(r"\w{5,20}", login):                   #Регулярка на валидность по символам и нижнему "_" ([a-zA-Z0-9_]). Можно дополнить кириллицей [a-zA-ZА-ЯЁа-яё0-9_]
+        print(f"Your login >>{login}<<")
+    else:
+        print("Invalid login, please enter again!")
+
     
 check_login()
+
